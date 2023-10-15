@@ -1,0 +1,158 @@
+/* Gaya untuk elemen body */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Gaya untuk header */
+header {
+    background-color: #709096;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease; /* Animasi masuk saat halaman dibuka */
+}
+
+/* Gaya untuk tautan di header */
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+header nav ul li a:hover {
+    color: #f0f0f0;
+    transform: scale(1.1);
+}
+
+header nav ul li a:active {
+    transform: scale(0.9);
+}
+
+/* Gaya untuk kontainer */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease; /* Animasi masuk saat halaman dibuka */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animasi perubahan warna latar belakang dan transformasi */
+}
+
+/* Gaya untuk footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f2f2f2;
+    color: #000000;
+    animation: fadeIn 0.5s ease; /* Animasi masuk saat halaman dibuka */
+    transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
+}
+
+/* Gaya untuk teks yang di-highlight */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* Gaya untuk tabel */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    opacity: 0; /* Mulai dengan opacity 0 (sembunyikan) */
+    transform: translateY(20px); /* Geser elemen ke bawah */
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animasi masuk per tabel */
+@keyframes fadeInTable {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Terapkan animasi pada tabel saat elemen ini ada dalam kontainer dengan class "show" */
+.container.show table {
+    animation: fadeInTable 0.5s ease forwards;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Mengatur tampilan sel hover pada tabel */
+table tr:hover {
+    background-color: #f2f2f2;
+    transition: background-color 0.3s ease;
+}
+
+/* Animasi masuk saat halaman dibuka */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Gaya untuk sel header tabel (th) */
+th {
+    background-color: #709096;
+    color: #ffffff;
+    padding: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+/* Gaya untuk sel data tabel (td) */
+td {
+    border: 1px solid #dddddd;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Gaya untuk sel data tabel pada baris ganjil */
+tr:nth-child(odd) td {
+    background-color: #f0f0f0;
+}
+
+/* Gaya untuk sel data tabel pada baris genap */
+tr:nth-child(even) td {
+    background-color: #ffffff;
+}
+
+/* Animasi saat kursor mendekat ke header */
+header:hover {
+    background-color: #5a798f; /* Ganti warna latar belakang saat hover */
+    transform: rotate(90); /* Geser header ke atas saat hover */
+}
+
+/* Animasi saat kursor mendekat ke kontainer */
+.container:hover {
+    background-color: #ffffff; /* Ganti warna latar belakang saat hover */
+    transform: scale(1.01); /* Perbesar kontainer saat hover */
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honda eSaf</title>
+    <style>
+        /* Gaya untuk elemen body */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column; /* Mengatur tata letak vertikal */
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Gaya untuk judul level 1 (h1) */
+        h1 {
+            text-align: center;
+            color: #000000;
+            transition: transform 0.2s, color 0.5s; /* Tambahkan transisi warna */
+            margin: 20px 0; /* Jarak atas dan bawah dari judul */
+        }
+
+        h1:hover {
+            transform: translateX(5px);
+            color: #0c56aa; /* Warna saat hover */
+        }
+
+        /* Gaya untuk tabel */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 1100px;
+            background-color: #ffffff;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s;
+        }
+
+        table:hover {
+            transform: scale(1.02);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid #a6bdd6;
+            border-right: 2px solid #a6bdd6;
+        }
+
+        th:last-child, td:last-child {
+            border-right: none;
+        }
+
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #dfeeff;
+        }
+
+        td {
+            font-weight: 500;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        td:hover {
+            color: #0c56aa; /* Warna merah saat hover */
+            transform: translateX(5px);
+        }
+
+        /* Efek animasi teks dalam tabel */
+        .table-animated-text td {
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .table-animated-text td:hover {
+            color: #e74c3c; /* Warna merah saat hover */
+            transform: translateX(5px);
+        }
+
+        /* Animasi masuk per baris */
+        @keyframes fadeInRow {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        }
+
+        /* Terapkan animasi pada setiap baris tabel */
+        tr {
+        animation: fadeInRow 0.5s ease forwards;
+        opacity: 0;
+        transform: translateY(20px);
+        }
+
+        /* Mengatur tampilan sel hover pada tabel */
+        tr:hover {
+        background-color: #e0e0e0;
+        transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="animated-text">Daftar Motor honda yang menggunakan rangka eSAF</h1>
+    </div>
+    <div>
+        <h1>Selamat Datang</h1>
+        <p>
+          <a href="index.html" >Home</a> |
+          <a href="contact.html" >Contact</a> |
+          <a href="about us.html" >About</a>
+        </p>
+    </div>
+    <div>
+        <center><table border="2"></center>
+            <tr>
+                <th>No</th>
+                <th>Nama Motor</th>
+                <th>Harga</th>
+                <th>Gambar</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td class="highlight">Honda Genio</td>
+                <td><a href="https://www.astra-honda.com/product/genio">Rp. 19,110,000</a></td>
+                <td><img src="https://ik.imagekit.io/zlt25mb52fx/ahmcdn/tr:w-550,f-auto/uploads/product/thumbnail/thumbnail-acc-6-25072023-093811.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td class="highlight">Honda BeAT</td>
+                <td><a href="https://www.astra-honda.com/product/beat">Rp. 18,050,000</a></td>
+                <td><img src="https://ik.imagekit.io/zlt25mb52fx/ahmcdn/tr:w-550,f-auto/uploads/product/thumbnail/ahm-gaul-sideview-deluxe-black-7-01022023-085330.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td class="highlight">Honda BeAT Street</td>
+                <td><a href="https://www.astra-honda.com/product/beat-street">Rp. 18,700,000</a></td>
+                <td><img src="https://ik.imagekit.io/zlt25mb52fx/ahmcdn/uploads/product/thumbnail/93e47a5a-2a5c-446f-9d78-299b084e1392-02022023-034049.png" alt=""></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td class="highlight">Honda Scoopy</td>
+                <td><a href="https://www.astra-honda.com/product/scoopy">Rp. 21,875,000</a></td>
+                <td><img src="https://ik.imagekit.io/zlt25mb52fx/ahmcdn/uploads/product/thumbnail/thumbnail-product-1-02112022-042907.png" alt="">
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td class="highlight">Honda Vario 160</td>
+                <td><a href="https://www.astra-honda.com/product/vario-160">Rp. 26,639,000</a></td>
+                <td><img src="https://ik.imagekit.io/zlt25mb52fx/ahmcdn/tr:w-550,f-auto/uploads/product/thumbnail/product-thmbnail-17-04022022-110721.png" alt=""></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

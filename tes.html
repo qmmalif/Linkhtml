@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animasi Masuk Paragraph</title>
+    <style>
+        /* Reset default margin and padding for the body and paragraph */
+        body, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling container */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Ini akan membuat konten berada di tengah vertikal layar */
+            background-color: #f0f0f0;
+        }
+
+        /* Animasi masuk */
+        .animated-paragraph {
+            opacity: 0;
+            transform: translateY(20px); /* Geser ke bawah 20px saat masuk */
+            animation: fadeInUp 1s ease-out forwards; /* Animasi dengan nama fadeInUp selama 1 detik */
+        }
+
+        /* Keyframes untuk animasi */
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="animated-paragraph">Ini adalah contoh animasi masuk.</p>
+    </div>
+</body>
+</html>
